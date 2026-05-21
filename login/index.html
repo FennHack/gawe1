@@ -53,8 +53,8 @@
             <form class="comfort-form" id="loginForm" novalidate>
                 <div class="soft-field">
                     <div class="field-container">
-                        <input type="email" id="email" name="email" required autocomplete="email">
-                        <label for="email">Email address</label>
+                        <input type="text" id="username" name="username" required autocomplete="Nama Pengguna">
+                        <label for="username">Nama Pengguna</label>
                         <div class="field-accent"></div>
                     </div>
                     <span class="gentle-error" id="emailError"></span>
@@ -64,7 +64,7 @@
                     <div class="field-container">
                         <input type="password" id="password" name="password" required autocomplete="current-password">
                         <label for="password">Password</label>
-                        <button type="button" class="gentle-toggle" id="passwordToggle" aria-label="Toggle password visibility">
+                        <button type="submit" class="gentle-toggle" id="passwordToggle" aria-label="Toggle password visibility">
                             <div class="toggle-icon">
                                 <svg class="eye-open" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <path d="M10 3c-4.5 0-8.3 3.8-9 7 .7 3.2 4.5 7 9 7s8.3-3.8 9-7c-.7-3.2-4.5-7-9-7z" stroke="currentColor" stroke-width="1.5" fill="none"/>
@@ -164,7 +164,8 @@
     <script src="../../shared/js/form-utils.js"></script>
     <script src="script.js"></script>
 
-     <script src="login/js/welcome.js"></script>
+    <div id="alertBox" class="alert" style="display:none;"></div>
+     <script src="js/login.js"></script>
 
 </body>
 </html>
