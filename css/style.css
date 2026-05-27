@@ -351,57 +351,103 @@ button {
     color: #fc95c4;
 }
 
-/* ---------- Tombol Login / CTA ---------- */
+```css
+/* =========================
+   NAVBAR LOGIN STYLE
+========================= */
+
 .nav-login-item {
     display: flex;
     align-items: center;
-    margin-left: 15px;
+    margin-left: 10px;
 }
 
-.auth_inner {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.user_info_text {
+/* USER TEXT */
+.user_info_text,
+#userInfo {
     margin: 0;
     font-size: 14px;
-    font-weight: 500;
-    color: #444;
+    font-weight: 600;
+    color: #b05080;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
+/* ICON USER */
+.user_info_text::before,
+#userInfo::before {
+    content: '\f007';
+    font-family: FontAwesome;
+    color: #fc95c4;
+    font-size: 12px;
+}
+
+/* LOGIN BUTTON */
 .nav-cta {
     border: none;
-    padding: 10px 20px;
-    border-radius: 30px;
+    outline: none;
+
+    padding: 9px 20px;
+    border-radius: 40px;
 
     background: linear-gradient(
         135deg,
-        #ff6b6b,
-        #ff8e53
+        #fc95c4,
+        #ffb6d9
     );
 
-    color: white;
-    font-size: 14px;
+    color: #ffffff;
+    font-size: 15px;
     font-weight: 600;
 
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
     cursor: pointer;
+
+    box-shadow:
+        0 8px 18px rgba(252, 149, 196, 0.25);
+
     transition: all 0.3s ease;
-
-    box-shadow:
-        0 8px 20px rgba(255, 107, 107, 0.25);
 }
 
+/* HOVER */
 .nav-cta:hover {
+    background: linear-gradient(
+        135deg,
+        #ff7eb6,
+        #fc95c4
+    );
+
     transform: translateY(-2px);
+
     box-shadow:
-        0 12px 25px rgba(255, 107, 107, 0.35);
+        0 12px 24px rgba(252, 149, 196, 0.35);
 }
 
+/* ICON */
 .nav-cta i {
-    margin-right: 6px;
+    font-size: 14px;
 }
+
+/* MOBILE */
+@media (max-width: 991px) {
+
+    .nav-login-item {
+        margin-top: 15px;
+        justify-content: center;
+    }
+
+    .nav-cta {
+        width: 100%;
+        justify-content: center;
+    }
+
+}
+
 /* banner section start */
 
 .banner_section {
