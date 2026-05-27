@@ -147,11 +147,13 @@ img {
 }
 
 .banner_img {
-    position: relative;
-    top: -60px;
+    text-align: center;
+    margin-top: -30px;
 }
 
 .banner_img img {
+    max-width: 100%;
+    height: auto;
     display: block;
 }
 
