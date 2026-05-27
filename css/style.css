@@ -310,10 +310,10 @@ button {
 /* ---------- Auth Bar (strip tipis di bawah navbar) ---------- */
 .auth_bar {
     width: 100%;
-    background: linear-gradient(90deg, #fff0f6 0%, #fce4f0 100%);
-    border-bottom: 1px solid #f7b8d9;
-    padding: 6px 0;
-    animation: slideDown 0.4s ease both;
+    background: transparent;
+    border: none;
+    padding: 0;
+    animation: none;
 }
 
 @keyframes slideDown {
@@ -405,7 +405,6 @@ button {
 
     border-radius: 0 !important;
 }
-
 /* HOVER */
 .nav-cta:hover {
     color: #fc95c4 !important;
