@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <!-- basic -->
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <!-- site metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
       <link href="daisy-removebg-preview.png" rel="icon">
       <title>DAISYMPHONY-Craft Shop</title>
       <meta name="keywords" content="">
@@ -18,6 +13,8 @@
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
       <!-- style css -->
       <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- login css (NEW) -->
+      <link rel="stylesheet" type="text/css" href="css/login-style.css">
       <!-- Responsive-->
       <link rel="stylesheet" href="css/responsive.css">
       <!-- fevicon -->
@@ -26,7 +23,7 @@
       <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
       <!-- Scrollbar Custom CSS -->
       <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-      <!-- Tweaks for older IEs-->
+      <!-- Font Awesome -->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
    </head>
    
@@ -34,9 +31,9 @@
       <div class="header_section">
          <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-               <a class="navbar-brand"href="index.html"><img src="images/logo.png"></a>
+               <a class="navbar-brand" href="index.html"><img src="images/logo.png"></a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
+                  <span class="navbar-toggler-icon"></span>
                </button>
                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto">
@@ -52,8 +49,10 @@
                      <li class="nav-item">
                         <a class="nav-link" href="services.html">Services</a>
                      </li>
+                     <!-- FIX: tambah </li> yang hilang -->
                      <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact Us</a>
+                     </li>
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
                      <div class="fa fa-search form-control-feedback"></div>
@@ -61,29 +60,41 @@
                </div>
             </nav>
          </div>
-         <p id="userInfo">Belum login</p>
-         <div id="authArea">
-         <button onclick="goLogin()" class="nav-cta">Login</button> 
+
+         <!-- FIX: auth area dipindah ke dalam header_section, diberi styling yang benar -->
+         <div class="auth_bar">
+            <div class="container">
+               <div class="auth_inner">
+                  <p id="userInfo" class="user_info_text">Belum login</p>
+                  <div id="authArea">
+                     <button onclick="goLogin()" class="nav-cta">
+                        <i class="fa fa-sign-in"></i> Login
+                     </button>
+                  </div>
+               </div>
+            </div>
          </div>
+
          <!-- banner section start --> 
          <div class="banner_section layout_padding">
             <div class="container">
                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                   <ol class="carousel-indicators">
                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">01</li>
-                     <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active">02</li>
-                     <li data-target="#carouselExampleIndicators" data-slide-to="2" class="active">03</li>
-                     <li data-target="#carouselExampleIndicators" data-slide-to="3" class="active">04</li>
+                     <li data-target="#carouselExampleIndicators" data-slide-to="1">02</li>
+                     <li data-target="#carouselExampleIndicators" data-slide-to="2">03</li>
+                     <li data-target="#carouselExampleIndicators" data-slide-to="3">04</li>
                   </ol>
                   <div class="carousel-inner">
+                     <!-- FIX: tambah </div> penutup col-sm-6 pertama yang hilang -->
                      <div class="carousel-item active">
                         <div class="row">
-                             <div class="col-sm-6">
+                           <div class="col-sm-6">
                               <h1 class="banner_taital">Selamat Datang!</h1>
                               <p class="banner_text">Selamat datang di Daisymphony, harmoni keindahan dalam setiap karya buatan tangan</p>
-                              <div class="started_text"><a href="https://wa.me/6287839127336">Pesan</a>
+                              <div class="started_text"><a href="https://wa.me/6287839127336">Pesan</a></div>
                            </div>
-                               <div class="col-sm-6">
+                           <div class="col-sm-6">
                               <div class="banner_img"><img src="images/banner-img.png"></div>
                            </div>
                         </div>
@@ -93,7 +104,7 @@
                            <div class="col-sm-6">
                               <h1 class="banner_taital">Gantungan Kunci</h1>
                               <p class="banner_text">Custom gantungan kunci sesuai gayamu? di Daisymphony semua bisa!</p>
-                              <div class="started_text"><a href="https://wa.me/6287839127336">Pesan</a>
+                              <div class="started_text"><a href="https://wa.me/6287839127336">Pesan</a></div>
                            </div>
                            <div class="col-sm-6">
                               <div class="banner_img"><img src="images/banner-img.png"></div>
@@ -105,7 +116,7 @@
                            <div class="col-sm-6">
                               <h1 class="banner_taital">Strap HP</h1>
                               <p class="banner_text">Temukan strap HP gemas sesuai keinginanmu disini!</p>
-                              <div class="started_text"><a href="https://wa.me/6287839127336">Pesan</a>
+                              <div class="started_text"><a href="https://wa.me/6287839127336">Pesan</a></div>
                            </div>
                            <div class="col-sm-6">
                               <div class="banner_img"><img src="images/banner-img.png"></div>
@@ -117,7 +128,7 @@
                            <div class="col-sm-6">
                               <h1 class="banner_taital">Pipe Flower</h1>
                               <p class="banner_text">Bunga yang tak akan layu, keindahan yang abadi</p>
-                              <div class="started_text"><a href="https://wa.me/6287839127336">Pesan</a>
+                              <div class="started_text"><a href="https://wa.me/6287839127336">Pesan</a></div>
                            </div>
                            <div class="col-sm-6">
                               <div class="banner_img"><img src="images/banner-img.png"></div>
@@ -131,7 +142,8 @@
          <!-- banner section end -->
       </div>
       <!-- header section end -->
-      <!-- about sectuion start -->
+
+      <!-- about section start -->
       <div class="about_section layout_padding">
          <div class="container">
             <div class="row">
@@ -146,13 +158,15 @@
             </div>
          </div>
       </div>
-      <!-- about sectuion end -->
-      <!-- cream sectuion start -->
+      <!-- about section end -->
+
+      <!-- cream section start -->
       <div class="cream_section layout_padding">
          <div class="container">
             <div class="row">
                <div class="col-md-12">
-                  <h1 class="cream_taital">Pilihan
+                  <!-- FIX: tag <h1> ditutup dengan benar -->
+                  <h1 class="cream_taital">Pilihan</h1>
                   <p class="cream_text">Pilih sesuka hatimu</p>
                </div>
             </div>
@@ -163,7 +177,7 @@
                         <div class="cream_img"><img src="images/img-1.png"></div>
                         <div class="price_text">$10</div>
                         <h6 class="strawberry_text">Strawberry Ice Cream</h6>
-                        <div class="cart_bt"><a href="#">Masukkan ke Kerajang</a></div>
+                        <div class="cart_bt"><a href="#">Masukkan ke Keranjang</a></div>
                      </div>
                   </div>
                   <div class="col-md-4">
@@ -215,7 +229,8 @@
             <div class="seemore_bt"><a href="#">Lihat Selengkapnya</a></div>
          </div>
       </div>
-      <!-- cream sectuion end -->
+      <!-- cream section end -->
+
       <!-- services section start -->
       <div class="services_section layout_padding">
          <div class="container">
@@ -230,7 +245,7 @@
                   <div class="col-md-4">
                      <div class="services_box">
                         <h5 class="tasty_text"><span class="icon_img"><img src="images/icon-1.png"></span>Cookies Ice Cream</h5>
-                        <p class="lorem_text">es krim dengan krim vanilla dan kukis </p>
+                        <p class="lorem_text">es krim dengan krim vanilla dan kukis</p>
                      </div>
                   </div>
                   <div class="col-md-4">
@@ -242,7 +257,7 @@
                   <div class="col-md-4">
                      <div class="services_box">
                         <h5 class="tasty_text"><span class="icon_img"><img src="images/icon-1.png"></span>Cookies Ice Cream</h5>
-                        <p class="lorem_text">es krim dengan krim vanilla dan kukis </p>
+                        <p class="lorem_text">es krim dengan krim vanilla dan kukis</p>
                      </div>
                   </div>
                </div>
@@ -251,6 +266,7 @@
          </div>
       </div>
       <!-- services section end -->
+
       <!-- testimonial section start -->
       <div class="testimonial_section layout_padding">
          <div class="container">
@@ -277,15 +293,15 @@
                               </div>
                               <div class="carousel-item">
                                  <p class="testimonial_text">eskrim enak</p>
-                                 <h4 class="client_name">fira</h4>
+                                 <h4 class="client_name">Fira</h4>
                                  <div class="client_img"><img src="images/client-img.png"></div>
                               </div>
                            </div>
                            <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
-                           <i class="fa fa-angle-left"></i>
+                              <i class="fa fa-angle-left"></i>
                            </a>
                            <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
-                           <i class="fa fa-angle-right"></i>
+                              <i class="fa fa-angle-right"></i>
                            </a>
                         </div>
                      </div>
@@ -295,6 +311,7 @@
          </div>
       </div>
       <!-- testimonial section end -->
+
       <!-- contact section start -->
       <div class="contact_section layout_padding">
          <div class="container">
@@ -307,16 +324,16 @@
                            <input type="text" class="email-bt" placeholder="Name" name="Name">
                         </div>
                         <div class="form-group">
-                           <input type="text" class="email-bt" placeholder="Email" name="Name">
+                           <input type="email" class="email-bt" placeholder="Email" name="Email">
                         </div>
                         <div class="form-group">
-                           <input type="text" class="email-bt" placeholder="Phone Number" name="Email">
+                           <input type="tel" class="email-bt" placeholder="Phone Number" name="Phone">
                         </div>
                         <div class="form-group">
                            <textarea class="massage-bt" placeholder="Message" rows="5" id="comment" name="Message"></textarea>
                         </div>
+                        <div class="main_bt"><a href="#">Kirim</a></div>
                      </form>
-                     <div class="main_bt"><a href="#">Kirim</a></div>
                   </div>
                </div>
                <div class="col-md-8">
@@ -324,16 +341,17 @@
                      <ul>
                         <li>
                            <a href="#">
-                           <span class="padding_left_10 active"><i class="fa fa-map-marker" aria-hidden="true"></i></span>SMA N 8 YOGYAKARTA</a>
-                        </li>
-                        <li>
-                           <a href="#">
-                           <span class="padding_left_10"><i class="fa fa-phone" aria-hidden="true"></i></span>Call : +62 87839127336
+                              <span class="padding_left_10 active"><i class="fa fa-map-marker" aria-hidden="true"></i></span>SMA N 8 YOGYAKARTA
                            </a>
                         </li>
                         <li>
                            <a href="#">
-                           <span class="padding_left_10"><i class="fa fa-envelope" aria-hidden="true"></i></span>Email : rastiaryan@gmail.com
+                              <span class="padding_left_10"><i class="fa fa-phone" aria-hidden="true"></i></span>Call : +62 87839127336
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                              <span class="padding_left_10"><i class="fa fa-envelope" aria-hidden="true"></i></span>Email : rastiaryan@gmail.com
                            </a>
                         </li>
                      </ul>
@@ -350,6 +368,7 @@
          </div>
       </div>
       <!-- contact section end -->
+
       <!-- copyright section start -->
       <div class="copyright_section">
          <div class="container">
@@ -357,16 +376,15 @@
          </div>
       </div>
       <!-- copyright section end -->
-      <!-- Javascript files-->
+
+      <!-- Javascript files -->
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.0.0.min.js"></script>
       <script src="js/plugin.js"></script>
-      <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
-      <!-- javascript --> 
-            <script src="login/js/welcome.js"></script>
-</body>
+      <script src="login/js/welcome.js"></script>
+   </body>
 </html>
