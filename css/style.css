@@ -352,94 +352,56 @@ button {
 }
 
 /* ---------- Tombol Login / CTA ---------- */
-.nav-cta,
-#authArea button,
-#authArea a {
-    display: inline-flex;
+.nav-login-item {
+    display: flex;
     align-items: center;
-    gap: 7px;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    color: #ffffff !important;
-    background: linear-gradient(135deg, #fc95c4 0%, #f96baa 100%);
+    margin-left: 15px;
+}
+
+.auth_inner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user_info_text {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+}
+
+.nav-cta {
     border: none;
+    padding: 10px 20px;
     border-radius: 30px;
-    padding: 7px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #ff6b6b,
+        #ff8e53
+    );
+
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+
     cursor: pointer;
-    box-shadow: 0 3px 12px rgba(252, 107, 170, 0.35);
     transition: all 0.3s ease;
-    text-decoration: none !important;
-    white-space: nowrap;
+
+    box-shadow:
+        0 8px 20px rgba(255, 107, 107, 0.25);
 }
 
-.nav-cta:hover,
-#authArea button:hover,
-#authArea a:hover {
-    background: linear-gradient(135deg, #f96baa 0%, #e0457e 100%);
-    box-shadow: 0 5px 18px rgba(252, 107, 170, 0.5);
-    transform: translateY(-1px);
-    color: #ffffff !important;
+.nav-cta:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 12px 25px rgba(255, 107, 107, 0.35);
 }
 
-.nav-cta:active,
-#authArea button:active {
-    transform: translateY(0px);
-    box-shadow: 0 2px 8px rgba(252, 107, 170, 0.3);
+.nav-cta i {
+    margin-right: 6px;
 }
-
-/* ---------- Tombol Logout (jika ada, class berbeda) ---------- */
-.btn-logout,
-#authArea .logout-btn {
-    background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
-    color: #555 !important;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-.btn-logout:hover,
-#authArea .logout-btn:hover {
-    background: linear-gradient(135deg, #e0e0e0 0%, #c8c8c8 100%);
-    color: #333 !important;
-    box-shadow: 0 5px 14px rgba(0,0,0,0.15);
-}
-
-/* ---------- Nama pengguna yang sudah login ---------- */
-.user_info_text.logged-in,
-#userInfo.logged-in {
-    color: #d63384;
-    font-weight: 700;
-}
-
-.user_info_text.logged-in::before,
-#userInfo.logged-in::before {
-    content: '\f058';            /* fa-check-circle */
-    color: #28a745;
-}
-
-/* ---------- Responsif: mobile ---------- */
-@media (max-width: 576px) {
-    .auth_inner {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 8px;
-        padding: 2px 0;
-    }
-
-    .user_info_text,
-    #userInfo {
-        font-size: 12px;
-    }
-
-    .nav-cta,
-    #authArea button,
-    #authArea a {
-        font-size: 12px;
-        padding: 6px 16px;
-    }
-}
-
-
 /* banner section start */
 
 .banner_section {
