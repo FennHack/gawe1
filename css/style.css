@@ -353,28 +353,23 @@ button {
     color: #fc95c4;
 }
 
-/* =========================
-   NAVBAR LOGIN STYLE
-========================= */
-
-/* =========================
-   NAVBAR LOGIN STYLE
-========================= */
+/* LOGIN NAVBAR SIMPLE */
 
 .nav-login-item {
     display: flex;
     align-items: center;
+    gap: 12px;
     margin-left: 10px;
 }
 
-/* USER TEXT */
+/* TEXT USER */
 .user_info_text,
 #userInfo {
     margin: 0;
-    font-size: 14px;
-    font-weight: 600;
-    color: #b05080;
-    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #222;
+    font-family: 'Poppins', sans-serif;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -385,23 +380,21 @@ button {
 #userInfo::before {
     content: '\f007';
     font-family: FontAwesome;
-    color: #fc95c4;
     font-size: 12px;
+    color: #fc95c4;
 }
 
-/* LOGIN BUTTON */
-.nav-cta {
-    border: none;
-    outline: none;
-
+/* BUTTON LOGIN */
+.nav-login-btn {
     background-color: #fc95c4;
-
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 600;
+    border: none;
+    border-radius: 50px;
 
     padding: 8px 22px;
-    border-radius: 50px;
+
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
 
     display: flex;
     align-items: center;
@@ -409,37 +402,23 @@ button {
 
     cursor: pointer;
 
-    transition: all 0.3s ease;
-
-    box-shadow:
-        0 6px 18px rgba(252, 149, 196, 0.30);
+    transition: 0.3s ease;
 }
 
 /* HOVER */
-.nav-cta:hover {
-    background-color: #ff7eb6;
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 10px 22px rgba(252, 149, 196, 0.40);
-}
-
-/* ICON */
-.nav-cta i {
-    font-size: 14px;
+.nav-login-btn:hover {
+    background-color: #ff78b5;
 }
 
 /* MOBILE */
 @media (max-width: 991px) {
 
     .nav-login-item {
-        margin-top: 15px;
         justify-content: center;
+        margin-top: 10px;
     }
 
 }
-
 /* banner section start */
 
 .banner_section {
