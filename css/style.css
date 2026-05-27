@@ -298,6 +298,147 @@ button {
 
 /* header section end */
 
+/* =====================================================
+   login-style.css
+   CSS untuk Auth Bar (userInfo + tombol Login/Logout)
+   di halaman Daisymphony
+   ===================================================== */
+
+/* ---------- Google Font tambahan ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+/* ---------- Auth Bar (strip tipis di bawah navbar) ---------- */
+.auth_bar {
+    width: 100%;
+    background: linear-gradient(90deg, #fff0f6 0%, #fce4f0 100%);
+    border-bottom: 1px solid #f7b8d9;
+    padding: 6px 0;
+    animation: slideDown 0.4s ease both;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.auth_inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+}
+
+/* ---------- Teks status login ---------- */
+.user_info_text,
+#userInfo {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #b05080;
+    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.user_info_text::before,
+#userInfo::before {
+    content: '\f007';            /* fa-user */
+    font-family: FontAwesome;
+    font-size: 12px;
+    color: #fc95c4;
+}
+
+/* ---------- Tombol Login / CTA ---------- */
+.nav-cta,
+#authArea button,
+#authArea a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #fc95c4 0%, #f96baa 100%);
+    border: none;
+    border-radius: 30px;
+    padding: 7px 20px;
+    cursor: pointer;
+    box-shadow: 0 3px 12px rgba(252, 107, 170, 0.35);
+    transition: all 0.3s ease;
+    text-decoration: none !important;
+    white-space: nowrap;
+}
+
+.nav-cta:hover,
+#authArea button:hover,
+#authArea a:hover {
+    background: linear-gradient(135deg, #f96baa 0%, #e0457e 100%);
+    box-shadow: 0 5px 18px rgba(252, 107, 170, 0.5);
+    transform: translateY(-1px);
+    color: #ffffff !important;
+}
+
+.nav-cta:active,
+#authArea button:active {
+    transform: translateY(0px);
+    box-shadow: 0 2px 8px rgba(252, 107, 170, 0.3);
+}
+
+/* ---------- Tombol Logout (jika ada, class berbeda) ---------- */
+.btn-logout,
+#authArea .logout-btn {
+    background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+    color: #555 !important;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.btn-logout:hover,
+#authArea .logout-btn:hover {
+    background: linear-gradient(135deg, #e0e0e0 0%, #c8c8c8 100%);
+    color: #333 !important;
+    box-shadow: 0 5px 14px rgba(0,0,0,0.15);
+}
+
+/* ---------- Nama pengguna yang sudah login ---------- */
+.user_info_text.logged-in,
+#userInfo.logged-in {
+    color: #d63384;
+    font-weight: 700;
+}
+
+.user_info_text.logged-in::before,
+#userInfo.logged-in::before {
+    content: '\f058';            /* fa-check-circle */
+    color: #28a745;
+}
+
+/* ---------- Responsif: mobile ---------- */
+@media (max-width: 576px) {
+    .auth_inner {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 2px 0;
+    }
+
+    .user_info_text,
+    #userInfo {
+        font-size: 12px;
+    }
+
+    .nav-cta,
+    #authArea button,
+    #authArea a {
+        font-size: 12px;
+        padding: 6px 16px;
+    }
+}
+
 
 /* banner section start */
 
