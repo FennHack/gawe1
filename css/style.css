@@ -355,6 +355,10 @@ button {
    NAVBAR LOGIN STYLE
 ========================= */
 
+/* =========================
+   NAVBAR LOGIN STYLE
+========================= */
+
 .nav-login-item {
     display: flex;
     align-items: center;
@@ -381,14 +385,6 @@ button {
     font-family: FontAwesome;
     color: #fc95c4;
     font-size: 12px;
-}
-
-/* LOGIN NAVBAR STYLE */
-
-.nav-login-item {
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
 }
 
 /* LOGIN BUTTON */
@@ -441,7 +437,6 @@ button {
     }
 
 }
-```
 
 /* banner section start */
 
