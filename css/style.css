@@ -389,29 +389,39 @@ button {
 
 /* LOGIN BUTTON */
 .nav-cta {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
+    border: none;
+    outline: none;
 
-    padding: 3px 15px !important;
+    background-color: #fc95c4;
 
-    font-size: 18px;
-    font-weight: 500;
-    color: #222222 !important;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+
+    padding: 8px 22px;
+    border-radius: 50px;
 
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
 
-    border-radius: 0 !important;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    box-shadow:
+        0 6px 18px rgba(252, 149, 196, 0.30);
 }
 
 /* HOVER */
 .nav-cta:hover {
-    color: #fc95c4 !important;
-    background: transparent !important;
-    transform: none !important;
-    box-shadow: none !important;
+    background-color: #ff7eb6;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 22px rgba(252, 149, 196, 0.40);
+}
 
 /* ICON */
 .nav-cta i {
